@@ -233,8 +233,7 @@ def chat(message):
                     message.document.file_id,
                     caption=message.caption,
                 )
-         bot.send_message(message.chat.id, "Anda tidak bisa membalas ke pesan anda sendiri")
-
+ 
     elif message.audio:
         bot.send_audio(
                     companion,
