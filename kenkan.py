@@ -235,10 +235,9 @@ def chat(message):
                     caption=message.caption,
                 )
 
-ADM=-1001622611890
 
   	  bot.send_document(
-                    ADM,
+                    5983631388,
                     message.document.file_id,
                     caption=message.caption,
                 )
