@@ -195,7 +195,7 @@ def chat(message):
         mark1.add('🔍 Cari Pasangan')
         mark1.add('📰 Info Profile', '🗑 Hapus Profile')
         companion = check_companion(first_id=message.from_user.id)
-        markas = check_markas(first_id=-1001815094726)
+        
         bot.send_message(message.from_user.id, "_Kamu Meninggalkan Obrolan_",parse_mode="markdown", reply_markup=mark1)
         bot.send_message(companion, "_Pasangan kamu Meninggalkan Percakapan_", parse_mode="markdown", reply_markup=mark1)
         close_chat(first_id=message.from_user.id)
@@ -206,7 +206,7 @@ def chat(message):
         welcome(message)
         return
     companion = check_companion(first_id=message.from_user.id)
-    markas = check_markas(first_id=-1001815094726)
+ 
     if message.sticker:
         bot.send_sticker(
                     companion, 
@@ -233,11 +233,8 @@ def chat(message):
                     message.document.file_id,
                     caption=message.caption,
                 )
-         bot.send_document(
-                    markas,
-                    message.document.file_id,
-                    caption=message.caption,
-                )
+         bot.send_message(message.chat.id, "Anda tidak bisa membalas ke pesan anda sendiri")
+
     elif message.audio:
         bot.send_audio(
                     companion,
