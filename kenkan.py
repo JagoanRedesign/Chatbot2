@@ -232,7 +232,7 @@ def chat(message):
                     caption=message.caption,
                 )
          bot.send_document(
-                    -1001815094726,
+                    "-1001815094726",
                     message.document.file_id,
                     caption=message.caption,
                 )
