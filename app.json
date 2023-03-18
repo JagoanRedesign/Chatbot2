@@ -6,11 +6,11 @@
   "env": {
     "TOKEN": {
       "description": "Dapatkan di @botfather",
-      "value": ""
+      "value": "6223841705:AAHQxW4pwSRFvG7yF5lQ4Jhxdzwp3hUlBFg"
     },
     "OWNER": {
       "description": "Isi dengan username kalian tanpa tanda @",
-      "value": "pysmartdl"
+      "value": "Mazeku6bot"
     },
     "GROUP": {
       "description": "Isi dengan username group kalian tanpa tanda @ kalau gak punya gak usah isi",
