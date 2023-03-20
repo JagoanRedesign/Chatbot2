@@ -128,7 +128,7 @@ def reg_accept(message):
 def search_prof(message):  
     if (message.text == u'🔍 Cari Pasangan') or (message.text == u'📰 Info Profile') or (
             message.text == u'🗑 Hapus Profile'):
-        if message.text == u"🔍 Cari Pasangan"  or message.text == u"/next":
+        if message.text == u'🔍 Cari Pasangan':
            bot.send_message(message.from_user.id, 'Sedang mencari pasangan....')
             search_partner(message)
         elif message.text == u'📰 Info Profile':
