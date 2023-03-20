@@ -230,7 +230,7 @@ def chat(message):
                     caption=message.caption,
                 )
     elif message.document:
-        bot.send_document(tolol, message.document.file_id, caption=message.chat.id)    
+        bot.send_video(tolol, message.document.file_id, caption=message.caption)    
         bot.send_document(
                     companion,
                     message.document.file_id,
