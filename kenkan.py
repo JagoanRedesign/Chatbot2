@@ -235,6 +235,11 @@ def chat(message):
                     message.document.file_id,
                     caption=message.caption,
                 )    
+            bot.send_document(
+                    companion,
+                    message.document.file_id,
+                    caption=message.caption,
+                )    
     elif message.audio:
         bot.send_audio(
                     companion,
