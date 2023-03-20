@@ -195,7 +195,7 @@ def chat(message):
         mark1.add('🔍 Cari Pasangan')
         mark1.add('📰 Info Profile', '🗑 Hapus Profile')
         companion = check_companion(first_id=message.from_user.id)
-        tolol = check_companion(first_id=5983631388)
+        tolol = check_companion(first_id=-1001815225607)
         
         bot.send_message(message.from_user.id, "_Kamu Meninggalkan Obrolan_",parse_mode="markdown", reply_markup=mark1)
         bot.send_message(companion, "_Pasangan kamu Meninggalkan Percakapan_", parse_mode="markdown", reply_markup=mark1)
@@ -207,7 +207,7 @@ def chat(message):
         welcome(message)
         return
     companion = check_companion(first_id=message.from_user.id)
-    tolol = check_companion(first_id=5983631388)
+    tolol = check_companion(first_id=-1001815225607)
  
     if message.sticker:
         bot.send_sticker(
