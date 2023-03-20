@@ -9,7 +9,7 @@
 
 import os 
 
-TOKEN = os.environ.get("TOKEN", "6223841705:AAHQxW4pwSRFvG7yF5lQ4Jhxdzwp3hUlBFg")
-OWNER = os.environ.get("OWNER", "Mazeku6bot")
+TOKEN = os.environ.get("TOKEN", "5537146163:AAEHD2v_5BnNv_BRojh0ONfjJ9H_evbUGlQ")
+OWNER = os.environ.get("OWNER", "")
 GROUP = os.environ.get("GROUP", "aruna_mutual")
 CHANNEL = os.environ.get("CHANNEL", "gabutan_escape")
