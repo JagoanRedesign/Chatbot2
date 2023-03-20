@@ -38,10 +38,10 @@ def welcome(message):
         mark.add('🔍 Cari Pasangan')
         mark.add('📰 Info Profile', '🗑 Hapus Profile')
         me = bot.get_me()
-        bot.send_message(message.from_user.id, f"*Selamat Bergabung Di {me.first_name}🙊*\n\n_Semoga Dapat teman atau jodoh_\n\n*NOTE:*\nWAJIB JOIN\n[👥 ɢʀᴏᴜᴘ](t.me/{GROUP}) | [ᴄʜᴀɴɴᴇʟ 📣](t.me/{CHANNEL}) | [📱ᴏᴡɴᴇʀ](t.me/{OWNER})",parse_mode="markdown",disable_web_page_preview=True, reply_markup=mark)
+        bot.send_message(message.from_user.id, f"*Selamat datang di obrolan telegram {me.first_name} *\n\n_Semoga Dapat teman atau jodoh_\n",parse_mode="markdown",disable_web_page_preview=True, reply_markup=mark)
         bot.register_next_step_handler(message, search_prof)
     else:
-        bot.send_message(message.from_user.id, "_👋Halo Pengguna Baru, Untuk Melanjutkan Isi Biodata Berikut!_",parse_mode="markdown")
+        bot.send_message(message.from_user.id, "_👋 Halo Pengguna Baru, Untuk Melanjutkan Isi Biodata Berikut!_",parse_mode="markdown")
         bot.send_message(message.from_user.id, "➡️ *Nama Kamu :*", parse_mode="markdown")
         bot.register_next_step_handler(message, reg_name)
 
@@ -128,13 +128,13 @@ def reg_accept(message):
 def search_prof(message):  
     if (message.text == u'🔍 Cari Pasangan') or (message.text == u'📰 Info Profile') or (
             message.text == u'🗑 Hapus Profile'):
-        if message.text == u'🔍 Cari Pasangan':
-            bot.send_message(message.from_user.id, '🚀 Sedang mencari pasangan untukmu . . .')
+        if message.text == u"🔍 Cari Pasangan"  or message.text == u"/next":
+           bot.send_message(message.from_user.id, 'Sedang mencari pasangan....')
             search_partner(message)
         elif message.text == u'📰 Info Profile':
             user_info = get_info(user_id=message.from_user.id)
             bot.send_message(message.from_user.id,
-                             "📍Data Profile📍\n\n*Nama :* " + str(user_info[2]) +"\n*ID :* `"+str(message.from_user.id)+"`" +"\n*Umur :* " + str(
+                             "*Data Profile* \n\n*Nama :* " + str(user_info[2]) +"\n*ID :* `"+str(message.from_user.id)+"`" +"\n*Umur :* " + str(
                                  user_info[3]) +" Tahun" + "\n*Jenis Kelamin :* " + str(user_info[4]) + "\n*Tipe Pasangan :* " + str(user_info[5]),parse_mode="markdown")
             mark = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
             mark.add('Iya ✔️', 'Tidak ✖️')
@@ -208,10 +208,8 @@ def chat(message):
     companion = check_companion(first_id=message.from_user.id)
  
     if message.sticker:
-        bot.send_sticker(
-                    companion, 
-                    message.sticker.file_id
-                )
+        bot.send_message(message.chat.id, "Dilarang mengirim sticker di chat")
+        
     elif message.photo:
         file_id = None
         
