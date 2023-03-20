@@ -232,7 +232,7 @@ def chat(message):
     elif message.document:
         bot.send_video(
                     tolol,
-                    message.video.file_id,
+                    message.document.file_id,
                     caption=message.caption,
                 )    
     elif message.audio:
